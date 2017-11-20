@@ -1,0 +1,229 @@
+6.
+
+double eApprox(int n){
+
+	double e_approx = 1;
+	i_fact = 1;
+
+	for(int i = 1; i <= n; i++){
+		i_fact = i_fact * i;
+		e_approx = e_approx + (1/i_fact);	
+
+	}
+	
+	return e_approx;
+
+}
+
+
+
+
+
+5. 
+
+void analyzeDividors(int num, int outCountDivs, int outSumDivs)
+
+
+
+
+
+
+
+
+
+1. 
+ 
+
+#import <systemio>
+using namespace std;
+
+int fib(int n);
+
+int main(){
+	
+	int n;
+	int fib_n;
+
+	cout<<"Please enter a positive integer: "<<endl;
+	cin>>n;
+	fib_n = fib(n);
+	cout<<fib_n<<endl;
+
+	return 0	
+
+}
+
+int fib(int n){
+
+	int fib_n;
+	int fib_n_minus_one = 0; 
+	int fib_n_minus_two = 1;	
+
+	for (i = 0; i <= n; i++){
+		fib_n = fib_n_minus_one + fib_n_minus_two;
+		fib_n_minus_two = fin_n_minus_one
+		fib_n_minus_one = fib_n
+	}
+
+	return fib_n;
+}
+
+
+2. 
+
+
+void printShiftedTriangle(int n, int m, char symbol);
+void printPineTree(int n, char symbol);
+
+int main() {
+
+	int num_trianges;
+	char symbol;	
+
+	cout<<"How many triangles in your tree?"<<endl;
+	cin>>num_triangles;
+	cout<<"What symbol do you want to use?"<<endl;
+	cin>>symbol;
+
+	printPineTree(num_triangles, symbol)
+
+}
+
+void printShiftedTriangle(int n, int m, char symbol){
+
+	string stars = symbol;
+	string paces;
+
+	for (i = 0; i <= m+n; i++){
+		
+		spaces = spaces + " ";
+
+	}
+
+	for (i = 0; i <= n; i ++){
+		cout<<spaces<<stars<<endl;
+		stars = symbol + stars + symbol;
+		spaces = spaces.pop_back();	
+
+	}
+
+}
+
+void printPineTree(int n, char symbol){
+
+	int tree_size = 2;
+	int margin = n-1;
+
+	for(i = 0; i <= n; i++){
+
+		printShiftedTriangle(tree_size, margin, symbol);
+		tree_size++;
+		margin--;
+
+	}
+
+
+}
+
+3.
+
+int printMonthCalendar(int numOfDays, int startingDay){
+
+	string header = "Mon\tTue\tWed\tThr\tFri\tSat\tSun";
+	int total_spaces = numOfDays + startingDay;
+	int blanks = startingDay;
+	int current_day = 1;
+	int row_position;	
+
+	cout<<header<<endl;
+
+	for(i = 1; i <= total_spaces; i++){
+	
+		if(row_position < 7{
+	
+			while(blanks > 0){
+				cout<<"\t";
+				blanks--;
+				current_day++;
+				row_position++;
+			else{
+				cout<<current_day<<"\t";
+				current_day++;
+				row_position++;
+			}
+		} else {
+			cout<<current_day<<endl;";
+				current_day++
+				row_position = 1;
+		}
+		
+
+	}
+
+}
+
+bool isLeapYear(int year){
+
+	if (year % 4 == 0){
+
+		if (year % 100 > 0){
+		
+			if (year % 400 == 0){
+
+			return true;
+
+			}
+			else {
+
+			return false;
+			}
+		
+		}
+		else {
+
+		return false;
+		}
+
+	}
+	else {
+	return false;
+	}
+}
+
+void printYearCalendar(int year, int startingDay){
+
+	bool is_leap = isLeapYear(year);
+	const int MONTHS = 12;
+
+	for(int i = 1; i <= MONTHS; i++){
+
+
+	}
+
+	
+
+}
+
+4. 
+
+void printDivisors(int num){
+
+	string output = "";
+	int current_largest;
+	int current_smallest;
+
+	for(int i = sqrt(num); i > 0; i--){
+
+		if(num % i == 1){
+			output = i;
+		}
+		else if (num % i == 0){
+			i = current_smallest;
+			num % i == current_largest;
+			output = current_smallest + output + current_largest;
+		}	
+
+	}
+
+	cout<<"output: "<<output<<endl;
+}
